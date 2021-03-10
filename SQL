@@ -1,0 +1,8 @@
+CREATE TABLE users (id integer PRIMARY KEY auto_increment, email varchar(20) NOT NULL, password varchar(40), firstname varchar(20),lastname varchar(20), isAdmin boolean DEFAULT 0 ); 
+
+INSERT INTO users (email,password, firstname, lastname,isAdmin) VALUES ("rob@test.de","123456test", "Robert", "Ristock", true);
+
+insert into users (email,password, firstname, lastname,isAdmin) values ("marc@test.de","123456test", "Marc", "Hernandez", false),("aza@test.de","123456test", "Azael", "Alonso", false);
+
+
+select *  from users where isAdmin = false;
